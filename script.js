@@ -1,4 +1,6 @@
 let display = document.getElementById('display');
+let darkmode = localStorage.getItem('darkmode');
+let themeToggle = document.querySelector('.theme-toggle');
 
 
 function addNumber(num){
@@ -52,14 +54,14 @@ function handleSquare(){
 
 function handleSqrt(){
   let  display = document.getElementById('display').value;
-  
+  sqrt = Math.sqrt(display);
 }
 
 document.addEventListener('keydown',(e) => {
   if(e.key >='0' && e.key <= '9'){
     addNumber(e.key);
   }
-  if(['+','-','×','÷'].includes(e.key)){
+  if(['+','-','*','÷'].includes(e.key)){
     addOperation(e.key);
   }
   if(e.key === 'Enter'){
@@ -87,3 +89,16 @@ document.addEventListener('keydown',(e) => {
     addOperation('%');
   }
 }) 
+
+
+themeToggle.addEventListener('click', function() {
+  document.body.classList.toggle('darkmode');
+
+  if(document.body.classList.contains('darkmode')){
+    themeToggle.querySelector('svg:last-child').style.display = 'none';
+    themeToggle.querySelector('svg:first-child').style.display = 'block';
+  } else{
+    themeToggle.querySelector('svg:first-child').style.display = 'none';
+    themeToggle.querySelector('svg:last-child').style.display = 'block';
+  }
+})

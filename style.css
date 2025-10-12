@@ -1,3 +1,6 @@
+
+
+
 *{
   box-sizing: border-box;
   font-family: Arial, sans-serif;
@@ -62,3 +65,49 @@ button{
   color: #fff;
 }
 
+.theme-toggle{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #c1bdbd;
+  display: flex;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-toggle svg:first-child{
+  display: none;
+}
+
+.darkmode .theme-toggle svg:last-child{
+  display: none;
+}
+
+.darkmode .theme-toggle svg:last-child{
+  display: block;
+}
+
+.darkmode{
+  background-color: #1e1e1e;
+  color:#ffffffff;
+  transition: all 0.3s ease;
+}
+
+.darkmode .Calculator{
+  background-color: rgba(205, 205, 205, 0.87);
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.555);
+}
+
+.darkmode .operation{
+  background-color: rgba(51, 50, 50, 0.94) ;
+  color: rgb(234, 100, 11);
+}
+
+.darkmode .equals{
+  background-color:  rgba(244, 145, 7, 0.995);
+  color: #1e1e1e;
+}
