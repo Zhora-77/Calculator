@@ -72,7 +72,7 @@ button{
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background-color: #c1bdbd;
+  background-color: transparent;
   display: flex;
   position: fixed;
   top: 20px;
@@ -98,16 +98,16 @@ button{
 }
 
 .darkmode .Calculator{
-  background-color: rgba(205, 205, 205, 0.87);
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.555);
+  background-color: #1b1c1f;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6) inset 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .darkmode .operation{
-  background-color: rgba(51, 50, 50, 0.94) ;
-  color: rgb(234, 100, 11);
+  background-color: #2a2b2f;
+  color: #f08c00;
 }
 
 .darkmode .equals{
-  background-color:  rgba(244, 145, 7, 0.995);
-  color: #1e1e1e;
+  background-color:  #2a2b2f;
+  color: #f15c05f6;
 }
